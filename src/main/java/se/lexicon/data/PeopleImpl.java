@@ -23,7 +23,6 @@ public class PeopleImpl implements People{
                 PreparedStatement preparedStatement=  MySqlConnection.getConnection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
                 preparedStatement.setString(1,person.getFirstName());
                 preparedStatement.setString(2,person.getLastName());
-                // todo: get person id that generated on the db
 
                 int temp = preparedStatement.executeUpdate();
 
